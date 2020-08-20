@@ -58,8 +58,8 @@ public class Leccion
         crear_Familia_Cartas();
      }
         public void crear_Familia_Cartas(){
-        cartas_Seleccionadas = new Carta[cantidad_Cartas];
-        if(ID_Tema==1){
+         cartas_Seleccionadas = new Carta[cantidad_Cartas];
+         if(ID_Tema==1){
            Carta carta1=new Carta(1,1); 
            Carta carta2=new Carta(1,2);
            Carta carta3=new Carta(1,3);
@@ -93,7 +93,7 @@ public class Leccion
                rand_temp=random_number();               
            }
          } 
-        else{
+         else{
             Carta carta1=new Carta(2,1); 
             Carta carta2=new Carta(2,2);
             Carta carta3=new Carta(2,3);
