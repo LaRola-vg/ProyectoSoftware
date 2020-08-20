@@ -41,6 +41,9 @@ public class Demo
         System.out.println("\n\nSuponemos que el ususario oprimio 1\n\n");
         leccion_1=new Leccion("MiniRolis", 2, 2, 1);
         //EL NUMERO 1 ES EL ID DEL TEMA ANIMALES
+        
+        System.out.println("==============Generando la lección==============");
+        
     }
 
         public static void main(String[] args)

@@ -18,7 +18,7 @@ public class Importar_datos
         // initialise instance variables
         x = 0;
     }
-
+    
     /**
      * Metodo para cargar imagenes de cartas, avatares y/o articulos
      * 
@@ -29,7 +29,7 @@ public class Importar_datos
     {
         
     }
-    
+   
     /**
      * Metodo para cargar sonidos de cartas
      * 
