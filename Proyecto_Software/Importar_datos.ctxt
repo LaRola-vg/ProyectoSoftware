@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Importar_datos
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Importar_datos\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Importar_datos()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Importar_datos\r\n
+comment2.params=
+comment2.target=void\ cargar_imagen()
+comment2.text=\r\n\ Metodo\ para\ cargar\ imagenes\ de\ cartas,\ avatares\ y/o\ articulos\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment3.params=
+comment3.target=void\ cargar_sonido()
+comment3.text=\r\n\ Metodo\ para\ cargar\ sonidos\ de\ cartas\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+numComments=4

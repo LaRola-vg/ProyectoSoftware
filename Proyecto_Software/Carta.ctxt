@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Carta
+comment0.text=\r\n\ Clase\ Carta\:\ Encargada\ de\ la\ informaci\u00F3n\ que\ ir\u00E1\ en\ las\ cartas\r\n\ contando\ as\u00ED\ con\ el\ sonido\ repectivo\ a\ la\ imagen\ de\ la\ carta,\r\n\ dicha\ informaci\u00F3n\ depender\u00E1\ del\ tema\ del\ que\ se\ trate\r\n\ \r\n\ @author\ (CardenasJeisson\ &\ VargasLaura)\ \r\n\ @version\ (1.0.0)\r\n
+comment1.params=tema_carta\ numero_carta
+comment1.target=Carta(int,\ int)
+comment1.text=\r\n\ @param\ tema_carta\:\ Identificador\ del\ tema\ de\ la\ carta\r\n\ @param\ numero_carta\:\ Identificador\ de\ la\ carta\ que\ ser\u00E1\ tomado\ en\ la\ BD.\r\n
+comment2.params=
+comment2.target=void\ importarDatos()
+numComments=3

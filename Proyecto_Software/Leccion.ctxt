@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Leccion
+comment0.text=\r\n\ Clase\ Lecci\u00F3n\:\ Encargada\ de\ la\ generaci\u00F3n\ de\ lecciones\ aleatorias,\ teniendo\ en\r\n\ cuenta\ que\ tendr\u00E1\ conexi\u00F3n\ con\ la\ clase\ DuoCarta,\ para\ as\u00ED,\ poder\ cargar\ las\ cartas\r\n\ en\ el\ tablero.\r\n\ \r\n\ @author\ (CardenasJeisson\ &\ VargasLaura)\ \r\n\ @version\ (1.0.0)\r\n
+comment1.params=nick\ x\ y
+comment1.target=Leccion(java.lang.String,\ int,\ int)
+comment1.text=\r\n\ @param\ tamano_tablero\:\ Vector\ el\ cual\ contendr\u00E1\ dos\ n\u00FAmeros\ que\ \ \ \ \ \r\n\ ser\u00E1n\ el\ tama\u00F1o\ del\ tablero\r\n\ @param\ errores\:\ N\u00FAmero\ que\ contar\u00E1\ la\ cantidad\ de\ errores\ que\ comete\r\n\ el\ usuario\ en\ una\ lecci\u00F3n\r\n\ @param\ aciertos\:\ N\u00FAmero\ que\ contar\u00E1\ la\ cantidad\ de\ aciertos\ que\ comete\r\n\ el\ usuario\ en\ una\ lecci\u00F3n\r\n\ @param\ carta\:\ Cartas\ que\ se\ solicitaran\ a\ la\ clase\ carta.\r\n
+comment2.params=x\ y
+comment2.target=void\ generador_tablero(int,\ int)
+comment3.params=
+comment3.target=int\ getErrores()
+comment4.params=
+comment4.target=int\ getAciertos()
+numComments=5

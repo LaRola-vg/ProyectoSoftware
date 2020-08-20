@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tienda
+comment0.text=\r\n\ Clase\ Tienda\:\ Encargada\ de\ los\ art\u00EDculos\ que\ se\ encontrar\u00E1n\ disponibles\r\n\ en\ la\ tienda,\ adem\u00E1s\ de\ validar\ la\ compra,\ teniendo\ en\ cuenta\ la\ cantidad\r\n\ de\ monedas\ disponibles\ del\ usuario,\ aparte\ de\ transferir\ los\ articulos\ al\r\n\ avatar\ una\ vez\ realizada\ la\ compra\r\n\ @author\ (CardenasJeisson\ &\ VargasLaura)\ \r\n\ @version\ (1.0.0)\r\n
+comment1.params=
+comment1.target=void\ cambiarEstado()
+comment1.text=\r\n\ @param\ articulo\:\ Identificador\ del\ articulo\ que\ se\ encuentra\ disponible\r\n\ o\ no\ en\ la\ tienda.\r\n
+comment2.params=
+comment2.target=void\ validarCompra()
+numComments=3

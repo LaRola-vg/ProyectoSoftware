@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Usuario
+comment0.text=\r\n\ Clase\ Usuario\:\ Contiene\ los\ datos\ del\ usuario,\ as\u00ED\ como\ su\ saldo\ en\ monedas\r\n\ Adem\u00E1s\ de\ contener\ el\ avatar\ y\ poder\ visualizarlo.\r\n\ @author\ (CardenasJeisson\ &\ VargasLaura)\ \r\n\ @version\ (1.0.0)\r\n
+comment1.params=nick\ edad
+comment1.target=Usuario(java.lang.String,\ int)
+comment1.text=\r\n\ @param\ nick\:\ Nombre\ del\ usuario.\r\n\ @param\ edad\:\ Edad\ del\ usuario.\r\n\ @param\ tienda\:\ Accede\ al\ art\u00EDculo\ y\ ve\ si\ est\u00E1\ bloqueado\ o\ no\r\n\ @param\ armario\:\ Asigna\ al\ avatar\ el\ art\u00EDculo\ que\ el\ usuario\ dej\u00F3\r\n\ seleccionado\ en\ el\ armario.\r\n
+numComments=2

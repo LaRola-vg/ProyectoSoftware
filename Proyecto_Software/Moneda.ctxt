@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Moneda
+comment0.text=\r\n\ Clase\ Moneda\:\ Encargada\ de\ la\ generaci\u00F3n\ de\ monedas\ cuando\ se\ completa\ una\ lecci\u00F3n,\ teniendo\ en\ cuenta\r\n\ cuenta\ el\ numero\ de\ aciertos\ y\ errores,\ realizar\u00E1\ el\ c\u00E1lculo\ respectivo\ y\ transferir\u00E1\ las\ monedas\ al\ usuario.\ \r\n\ \r\n\ @author\ (CardenasJeisson\ &\ VargasLaura)\ \r\n\ @version\ (1.0.0)\r\n
+comment1.params=
+comment1.target=void\ calculoMonedas()
+comment1.text=\r\n\ @param\ leccion\:\ Para\ saber\ para\ cual\ lecci\u00F3n\ complet\u00F3\ el\ usuario\ y\r\n\ as\u00ED\ poder\ realizar\ el\ c\u00E1lculo\ de\ monedas.\r\n\ @param\ usuario\:\ Para\ saber\ cual\ usuario\ fue\ el\ que\ complet\u00F3\ la\ lecci\u00F3n.\r\n
+comment2.params=usuario
+comment2.target=void\ entregaMonedas(Usuario)
+numComments=3
