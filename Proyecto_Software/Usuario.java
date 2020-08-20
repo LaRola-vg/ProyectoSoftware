@@ -9,7 +9,7 @@ public class Usuario
 {
     // instance variables - replace the example below with your own
     private String nick;
-    private int edad;
+    private String edad;
     private Tienda tienda;
     private Armario armario;
 
@@ -20,10 +20,20 @@ public class Usuario
      * @param armario: Asigna al avatar el artículo que el usuario dejó
      * seleccionado en el armario.
      */
-    public Usuario(String nick, int edad)
+    public Usuario(String nick, String edad)
     {
         this.nick=nick;
         this.edad=edad;        
+    }
+    
+    public String getNick()
+    {
+        return nick;
+    }
+    
+    public String getEdad()
+    {
+        return edad;
     }
     
 }

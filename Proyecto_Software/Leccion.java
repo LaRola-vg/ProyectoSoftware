@@ -23,7 +23,7 @@ public class Leccion
      * el usuario en una lección
      * @param carta: Cartas que se solicitaran a la clase carta.
      */
-    public Leccion(String nick, int x, int y)
+    public Leccion(String nick, int x, int y, int ID_Tema)
     {
         /*this.errores = errores;
         this.aciertos = aciertos;
@@ -31,9 +31,9 @@ public class Leccion
         tamano_tablero = new int[2];
         Parametros de entrada: nick y tamaño del tablero
         */
-       
+       Mi_tablero=generador_tablero(x, y, ID_Tema);
       }
-    public void generador_tablero(int x, int y){
+    public void generador_tablero(int x, int y, int ID_Tema){
         /* 
         * Se crea una matriz de tamaño [x,y] para guardar las cartas 
         */

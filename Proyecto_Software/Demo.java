@@ -31,12 +31,16 @@ public class Demo
     public Demo()
     {
         // initialise instance variables
-        usuario_1=new Usuario("MiniRolis", 7);
+        usuario_1=new Usuario("MiniRolis", "7");
         
         System.out.println("==============LISTEN THE CARD==============");
-        System.out.println("\nBienvenid@ "+ usuario_1.toString());
+        System.out.println("\nBienvenido "+ usuario_1.getNick());
         System.out.println("\nEscoge el tamaño del tablero: \nOprime 1 para jugar en un tablero 2x2 \nOprime 2 para jugar en un tablero 3x3");
-        //leccion_1=new Leccion("MiniRolis");
+        System.out.println("\n\nSuponemos que el ususario oprimio 1\n\n");
+        System.out.println("\nEscoge el tema del tablero: \nOprime 1 para jugar en un tablero sobre  animales \nOprime 2 para jugar en un tablero sobre colores");
+        System.out.println("\n\nSuponemos que el ususario oprimio 1\n\n");
+        leccion_1=new Leccion("MiniRolis", 2, 2, 1);
+        //EL NUMERO 1 ES EL ID DEL TEMA ANIMALES
     }
 
         public static void main(String[] args)
