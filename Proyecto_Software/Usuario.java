@@ -10,6 +10,7 @@ public class Usuario
     // instance variables - replace the example below with your own
     private String nick;
     private String edad;
+    private int saldo;
     private Tienda tienda;
     private Armario armario;
 
@@ -23,7 +24,8 @@ public class Usuario
     public Usuario(String nick, String edad)
     {
         this.nick=nick;
-        this.edad=edad;        
+        this.edad=edad;
+        this.saldo=20;
     }
     
     public String getNick()
