@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Clase Lección: Encargada de la generación de lecciones aleatorias, teniendo en
  * cuenta que tendrá conexión con la clase DuoCarta, para así, poder cargar las cartas
@@ -14,10 +14,13 @@ public class Leccion
     private int errores=0;
     private int aciertos=0;
     private int cantidad_Cartas;
+    private int x;
+    private int y;
     private Carta cartas_Seleccionadas[];
-    private Carta cartas_tema1[]= new Carta[10];
-    private Carta cartas_tema2[]= new Carta[10];
-    
+    private Carta cartas_Duplas[];
+    private Carta cartas_leccion[];
+    private Carta Tablero[][];
+
     /**
      * @param tamano_tablero: Vector el cual contendrá dos números que     
      * serán el tamaño del tablero
@@ -35,96 +38,104 @@ public class Leccion
         tamano_tablero = new int[2];
         Parametros de entrada: nick y tamaño del tablero
         */
-        generador_tablero(x, y, this.ID_Tema);
-        
-      }
-    public void generador_tablero(int x, int y, int ID_Tema){
-        /* 
-        * Se crea una matriz de tamaño [x,y] para guardar las cartas 
-        */
-        
-        
-        
-       
-        Carta Tablero[][]= new Carta [x][y];
-        //Teniendo en cuenta que solo habrá tableros 2x2 y 2x3 para esta version
-        //se mirará cuantas cartas son necesarias
-        if(y != 2){
-            cantidad_Cartas=3;
+        this.x=x;
+        this.y=y;
+        this.ID_Tema=ID_Tema;
+        this.Tablero=generador_tablero(this.x, this.y, this.ID_Tema);
+        for(int i=0; i<x; i++){
+            System.out.print("\n");
+            for(int j=0; j<y;j++){
+                System.out.print("\t"+Tablero[i][j].get_label()+"\t");
+            }
         }
-        else{
-            cantidad_Cartas=2;
-        }
-        crear_Familia_Cartas();
-     }
-        public void crear_Familia_Cartas(){
-         cartas_Seleccionadas = new Carta[cantidad_Cartas];
-         if(ID_Tema==1){
-           Carta carta1=new Carta(1,1); 
-           Carta carta2=new Carta(1,2);
-           Carta carta3=new Carta(1,3);
-           Carta carta4=new Carta(1,4);
-           Carta carta5=new Carta(1,5);
-           Carta carta6=new Carta(1,6);
-           Carta carta7=new Carta(1,7);
-           Carta carta8=new Carta(1,8);
-           Carta carta9=new Carta(1,9);
-           Carta carta10=new Carta(1,10);
-            
-           cartas_tema1[0]=carta1;
-           cartas_tema1[1]=carta2;
-           cartas_tema1[2]=carta3;
-           cartas_tema1[3]=carta4;
-           cartas_tema1[4]=carta5;
-           cartas_tema1[5]=carta6;
-           cartas_tema1[6]=carta7;
-           cartas_tema1[7]=carta8;
-           cartas_tema1[8]=carta9;
-           cartas_tema1[9]=carta10;
-           
-           int rand_temp=random_number();
-           int comparar=90;
-           
-            for(int i=0;i<cantidad_Cartas;i++){
-               if(rand_temp!=comparar){
-                 cartas_Seleccionadas[i]= cartas_tema1[rand_temp];                 
-               }
-               comparar=rand_temp;
-               rand_temp=random_number();               
-           }
-         } 
-         else{
-            Carta carta1=new Carta(2,1); 
-            Carta carta2=new Carta(2,2);
-            Carta carta3=new Carta(2,3);
-            Carta carta4=new Carta(2,4);
-            Carta carta5=new Carta(2,5);
-            Carta carta6=new Carta(2,6);
-            Carta carta7=new Carta(2,7);
-            Carta carta8=new Carta(2,8);
-            Carta carta9=new Carta(2,9);
-            Carta carta10=new Carta(2,10);
-            
-            cartas_tema2[0]=carta1;
-            cartas_tema2[1]=carta2;
-            cartas_tema2[2]=carta3;
-            cartas_tema2[3]=carta4;
-            cartas_tema2[4]=carta5;
-            cartas_tema2[5]=carta6;
-            cartas_tema2[6]=carta7;
-            cartas_tema2[7]=carta8;
-            cartas_tema2[8]=carta9;
-            cartas_tema2[9]=carta10;
-        }        
     }
+   public Carta[][] generador_tablero(int x, int y, int ID_Tema){
+        //Se crea una matriz de tamaño [x,y] para guardar las cartas
+        this.x=x;
+        this.y=y;
+        this.ID_Tema=ID_Tema;
+        Carta Tablero[][]= new Carta [x][y];
+        int cantidad_Cartas=(x*y)/2;
+        ArrayList<Carta[]> lista = new ArrayList<Carta[]>();
+        lista=crear_Familia_Cartas(cantidad_Cartas, ID_Tema);
+        cartas_Seleccionadas=lista.get(0);
+        cartas_Duplas=lista.get(1);
+        
+        cartas_leccion= new Carta[x*y];
+        int rand_temp[]=new int[x*y];
+        for(int i=0; i<(x*y); i++){
+            int cond=1;
+            while(cond>0){
+                rand_temp[i]=random_number(x*y);
+                cond=0;
+                for(int j=0; j<i; j++){
+                    if(rand_temp[i]==rand_temp[j]){
+                        cond++;
+                    }
+                }
+            }
+            if(rand_temp[i]>((x*y)/2)-1){
+                cartas_leccion[i]=cartas_Duplas[(rand_temp[i]-(cantidad_Cartas))];
+                
+            }else{
+                cartas_leccion[i]=cartas_Seleccionadas[rand_temp[i]];
+            }
+        }
+        int cont=0;
+        for(int i=0; i<x; i++){
+            for(int j=0; j<y;j++){
+                Tablero[i][j]=cartas_leccion[cont];
+                cont++;
+            }
+        }
+        return Tablero;
+    }
+
+    public ArrayList<Carta[]> crear_Familia_Cartas(int cantidad_Cartas, int ID_Tema){
+        this.cantidad_Cartas=cantidad_Cartas;
+        this.ID_Tema=ID_Tema;
+        //Creamos manualmente las cartas ya que en este momento no contamos con la base de datos que corresponde a 
+        //los datos de las cartas del juego
+        int rand_temp[]=new int[cantidad_Cartas];
+        rand_temp[0]=random_number(10);
+        cartas_Seleccionadas= new Carta[cantidad_Cartas];
+        cartas_Duplas= new Carta[cantidad_Cartas];
+        cartas_Seleccionadas[0]= new Carta(ID_Tema, rand_temp[0]);
+        cartas_Duplas[0]= cartas_Seleccionadas[0];
+        for(int i=1; i<cantidad_Cartas;i++){
+            int cond=1;
+            while(cond>0){
+                rand_temp[i]=random_number(10);
+                cond=0;
+                for(int j=0; j<i; j++){
+                    if(rand_temp[i]==rand_temp[j]){
+                        cond++;
+                    }
+                }
+            }
+            cartas_Seleccionadas[i]= new Carta(ID_Tema, rand_temp[i]);
+            cartas_Duplas[i]= cartas_Seleccionadas[i];
+        }
+        ArrayList<Carta[]> list = new ArrayList<Carta[]>();
+        list.add(cartas_Seleccionadas);
+        list.add(cartas_Duplas);
+        return list;
+    }
+    
+    public void mostrar_tablero(int x, int y){
+
+    }
+
     public int  getErrores(){
         return errores;
     }
+
     public int getAciertos(){
         return aciertos;
     }
-    public int random_number(){
-      int numero_Carta = (int) Math.floor(Math.random()*10);
-      return numero_Carta;
-     }
+
+    public int random_number(int x){
+        int numero_Carta = (int) Math.floor(Math.random()*x);
+        return numero_Carta;
+    }
 }

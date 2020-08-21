@@ -39,10 +39,12 @@ public class Demo
         System.out.println("\n\nSuponemos que el ususario oprimio 1\n\n");
         System.out.println("\nEscoge el tema del tablero: \nOprime 1 para jugar en un tablero sobre  animales \nOprime 2 para jugar en un tablero sobre colores");
         System.out.println("\n\nSuponemos que el ususario oprimio 1\n\n");
-        leccion_1=new Leccion("MiniRolis", 2, 2, 1);
+        System.out.println("==============Generando la lección==============");
+        leccion_1=new Leccion("MiniRolis", 4, 5, 1);
         //EL NUMERO 1 ES EL ID DEL TEMA ANIMALES
         
-        System.out.println("==============Generando la lección==============");
+
+        
         
     }
 
